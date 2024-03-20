@@ -1,4 +1,4 @@
 <h1>NgClass</h1>
 <button (click)="ChangeStatus()">Toggle active </button>
-<span [ngClass]="[isActive ? 'active':'inactive']"><br>Hello</span>
+<span [ngStyle]="{'color': isActive ? 'red' : 'black'}"><br>Hello</span>
 <p>active: {{isActive}}</p>
