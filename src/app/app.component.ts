@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularBootCamp';
+  isActive = false; 
+
+  public ChangeStatus(){
+    this.isActive = !this.isActive;
+  }
 }
