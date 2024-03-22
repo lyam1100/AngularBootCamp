@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'AngularBootCamp';
+  array: string[] = [];
+
+  ngOnInit(){
+    this.array = ["A","B","C"];
+  }
 }
