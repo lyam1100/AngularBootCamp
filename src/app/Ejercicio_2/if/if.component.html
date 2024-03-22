@@ -1,6 +1,6 @@
-<h1>NgFor</h1>
+<h1>NgIf</h1>
 <div>
     <ul *ngFor="let item of array;">
-        <li>{{item}}</li>
+        <li *ngIf="item!='B'">{{item}}</li>
     </ul>
 </div>

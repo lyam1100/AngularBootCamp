@@ -1,0 +1,11 @@
+<h1>NgSwitch</h1>
+<div>
+    <ul *ngFor="let item of array;">
+        <li [ngSwitch]="item">
+            <span *ngSwitchCase="'A'">1</span>
+            <span *ngSwitchCase="'B'">2</span>
+            <span *ngSwitchCase="'C'">3</span>
+            <span *ngSwitchDefault="">{{item}}</span>
+        </li>
+    </ul>
+</div>
