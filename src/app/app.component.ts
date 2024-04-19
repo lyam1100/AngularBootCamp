@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { InputNameDialogComponent } from './DialogComponents/input-name-dialog/input-name-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'AngularBootCamp';
+  name:string = '';
+  
+  constructor(public dialog: MatDialog){}
+  
+  ShowDialog(): void{
+    const _dialog = this.dialog.open(InputNameDialogComponent, {
+      width: '300px',
+      data:{name:this.name}
+    });
+
+    _dialog.afterClosed().subscribe(result => {this.name = result});
+  }
 }
